@@ -5,7 +5,7 @@ params = JSON.parse(STDIN.read)
 max_tries = params["max_tries"].to_i
 interval = params["interval"].to_i
 uri = URI(params["uri"])
-filename = File.join Dir.pwd, "download"
+filename = params["target_path"]
 
 tries = 0
 begin

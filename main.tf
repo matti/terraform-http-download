@@ -16,10 +16,11 @@ data "external" "http" {
   program = ["ruby", "${path.module}/http.rb"]
 
   query = {
-    depends_id = "${var.depends_id}"
-    uri        = "${var.uri}"
-    max_tries  = "${var.max_tries}"
-    interval   = "${var.interval}"
+    depends_id  = "${var.depends_id}"
+    uri         = "${var.uri}"
+    max_tries   = "${var.max_tries}"
+    interval    = "${var.interval}"
+    target_path = "${path.module}/download"
   }
 }
 
